@@ -165,6 +165,7 @@ ClassMethod BuildClinicalContextLines(panel As %String, items As %DynamicArray, 
     If ..HasSupplementKeyword(context) {
         Do out.%Push("Supplement context is present in medication records. Vitamins and food supplements can change some lab results or explain part of the pattern, so your clinician should interpret them together with the lab trend and timing of the dose.")
     }
+    Do ..AddSupplementImpactContextLines(.out, panel, items, context)
 
     If ..HasDiagnosticReportKeyword(context, "chronic kidney") || ..HasDiagnosticReportKeyword(context, "ckd") {
         Do out.%Push("Diagnostic report context suggests kidney disease history. Kidney-related labs may follow individualized baseline expectations.")
@@ -203,6 +204,37 @@ ClassMethod AddContextAwareMeaning(ByRef out As %DynamicArray, panel As %String,
 
     If ..HasDiagnosticReportKeyword(context, "fatty liver") {
         Do out.%Push("Because prior diagnostic reports mention liver findings, mild liver-enzyme changes may need trend-based follow-up rather than isolated interpretation.")
+    }
+}
+
+ClassMethod AddSupplementImpactContextLines(ByRef out As %DynamicArray, panel As %String, items As %DynamicArray, context As %DynamicObject = "") [ Internal ]
+{
+    Set hasIron = ..HasMedicationKeywordsAny(context, "iron|ferrous|ferric")
+    Set hasVitD = ..HasMedicationKeywordsAny(context, "vitamin d|cholecalciferol|ergocalciferol|calcitriol")
+    Set hasCalciumSupp = ..HasMedicationKeywordsAny(context, "calcium carbonate|calcium citrate|calcium supplement")
+    Set hasBiotin = ..HasMedicationKeywordsAny(context, "biotin|vitamin b7")
+    Set hasB12 = ..HasMedicationKeywordsAny(context, "vitamin b12|cyanocobalamin|methylcobalamin|hydroxocobalamin")
+    Set hasFolate = ..HasMedicationKeywordsAny(context, "folate|folic acid|methylfolate")
+
+    If panel = "cbc" {
+        If hasIron && (..HasLowByCode(items, "718-7") || ..HasLowByCode(items, "4544-3")) {
+            Do out.%Push("Supplement-specific context: iron treatment is present while anemia-pattern signals remain low. This can happen early in treatment or with incomplete response, so trend over time and adherence review are important.")
+        }
+        If (hasB12 || hasFolate) && (..HasLowByCode(items, "718-7") || ..HasLowByCode(items, "4544-3")) {
+            Do out.%Push("Supplement-specific context: B12/folate supplementation is recorded while blood-count abnormalities persist, so your clinician may review dose, absorption issues, and other causes of anemia.")
+        }
+    }
+
+    If panel = "cmp" {
+        If (hasVitD || hasCalciumSupp) && ..HasLowByCode(items, "17861-6") {
+            Do out.%Push("Supplement-specific context: vitamin D or calcium supplementation is present, but calcium remains low. Your clinician may review dose, adherence, absorption, and related labs (for example magnesium, kidney function, or parathyroid axis).")
+        } ElseIf (hasVitD || hasCalciumSupp) {
+            Do out.%Push("Supplement-specific context: vitamin D/calcium supplements are present, which can influence calcium-related interpretation depending on timing and dose.")
+        }
+    }
+
+    If hasBiotin {
+        Do out.%Push("Supplement-specific context: biotin supplementation is present. High-dose biotin can interfere with some immunoassay-based blood tests, so always report biotin use before lab collection.")
     }
 }
 
