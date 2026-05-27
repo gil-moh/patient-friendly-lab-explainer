@@ -1,0 +1,92 @@
+[
+  {
+    "id": "a1c-001",
+    "panel": "a1c",
+    "topic": "A1c overview",
+    "source": "ADA",
+    "text": "A1c estimates your average blood sugar over about 3 months. A higher A1c means blood sugar has been above target more often, which can increase risk of long-term complications.",
+    "qualityTag": "trusted-guideline",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "a1c-002",
+    "panel": "a1c",
+    "topic": "A1c targets",
+    "source": "ADA",
+    "text": "Many adults with diabetes use an A1c target near 7 percent, but goals differ by age, other conditions, and medication risk. Ask your doctor what target is right for you.",
+    "qualityTag": "trusted-guideline",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "lipids-001",
+    "panel": "lipids",
+    "topic": "LDL meaning",
+    "source": "AHA",
+    "text": "LDL is often called bad cholesterol because high levels are linked to plaque buildup in blood vessels. Lowering LDL can reduce future heart and stroke risk.",
+    "qualityTag": "trusted-guideline",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "lipids-002",
+    "panel": "lipids",
+    "topic": "HDL and triglycerides",
+    "source": "AHA",
+    "text": "HDL helps carry cholesterol away from arteries, while high triglycerides can increase cardiovascular risk. Diet, activity, and medications can improve lipid patterns.",
+    "qualityTag": "reviewed-education",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "cbc-001",
+    "panel": "cbc",
+    "topic": "Hemoglobin",
+    "source": "Mayo Clinic",
+    "text": "Hemoglobin carries oxygen in red blood cells. Low hemoglobin can cause tiredness, weakness, or shortness of breath and may need evaluation for blood loss or low iron.",
+    "qualityTag": "reviewed-education",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "cbc-002",
+    "panel": "cbc",
+    "topic": "White blood cells",
+    "source": "Cleveland Clinic",
+    "text": "White blood cells help fight infection. Very high or low values can signal infection, inflammation, medication effects, or bone marrow issues.",
+    "qualityTag": "reviewed-education",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "cmp-001",
+    "panel": "cmp",
+    "topic": "Creatinine",
+    "source": "National Kidney Foundation",
+    "text": "Creatinine is a waste product filtered by the kidneys. Higher levels can suggest reduced kidney filtration, especially when trends worsen over time.",
+    "qualityTag": "trusted-guideline",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "cmp-002",
+    "panel": "cmp",
+    "topic": "Potassium",
+    "source": "MedlinePlus",
+    "text": "Potassium supports heart and muscle function. Very low or very high potassium can be dangerous and may require urgent recheck or treatment changes.",
+    "qualityTag": "trusted-guideline",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  },
+  {
+    "id": "general-001",
+    "panel": "general",
+    "topic": "Discussing results",
+    "source": "AHRQ",
+    "text": "Bring your latest results and ask what changed, why it changed, and what action is needed now. A clear follow-up date helps turn lab information into a care plan.",
+    "qualityTag": "fallback",
+    "reviewedAt": "2026-05-27",
+    "language": "en"
+  }
+]

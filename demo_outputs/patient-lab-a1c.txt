@@ -1,0 +1,30 @@
+
+Patient-Friendly Lab Explainer
+Patient: synthetic-patient
+Panel: Hemoglobin A1c
+
+Your Most Recent Results
+- Hemoglobin A1c: 8.1 % (high)
+
+Your Trend
+- Hemoglobin A1c increased by .7 % since the prior result.
+
+What This Means
+- Hemoglobin A1c is above the typical reference range and should be reviewed with your doctor.
+
+Context From Your Medical Record
+- No specific non-lab context was found that changes interpretation today. If your health status changed, ask your clinician to reinterpret these labs in that context.
+
+Helpful Resources
+- A1c estimates average blood sugar over about 3 months. Higher A1c means blood sugar has been above target more often. [source: ADA:a1c-overview]
+
+Careful Lifestyle Options
+- No personalized lifestyle adjustment is suggested from current data. Keep routine healthy habits and review your plan at follow-up.
+- Safety note: These options are educational and should be personalized with your clinician, especially if you have chronic conditions, pregnancy, or medication interactions.
+
+Questions To Ask Your Doctor
+- Is my A1c target right for my age and health conditions?
+- What specific change would most improve my next A1c result?
+
+Suggested Next Step
+- Schedule follow-up soon to review worsening lab trends and agree on a treatment plan.

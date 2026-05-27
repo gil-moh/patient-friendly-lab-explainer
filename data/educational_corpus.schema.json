@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gil-moh/patient-friendly-lab-explainer/data/educational_corpus.schema.json",
+  "title": "Patient-Friendly Lab Education Corpus",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "panel",
+      "topic",
+      "source",
+      "text",
+      "qualityTag",
+      "reviewedAt"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 3
+      },
+      "panel": {
+        "type": "string",
+        "enum": [
+          "a1c",
+          "lipids",
+          "cbc",
+          "cmp",
+          "general"
+        ]
+      },
+      "topic": {
+        "type": "string",
+        "minLength": 2
+      },
+      "source": {
+        "type": "string",
+        "minLength": 2
+      },
+      "text": {
+        "type": "string",
+        "minLength": 30,
+        "maxLength": 700
+      },
+      "qualityTag": {
+        "type": "string",
+        "enum": [
+          "trusted-guideline",
+          "reviewed-education",
+          "fallback"
+        ]
+      },
+      "reviewedAt": {
+        "type": "string",
+        "format": "date"
+      },
+      "language": {
+        "type": "string",
+        "default": "en"
+      }
+    }
+  }
+}

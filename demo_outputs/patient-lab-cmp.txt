@@ -1,0 +1,31 @@
+
+Patient-Friendly Lab Explainer
+Patient: synthetic-patient
+Panel: Comprehensive Metabolic Panel
+
+Your Most Recent Results
+- Creatinine: 1.4 mg/dL (high)
+
+Your Trend
+- Creatinine increased by .2 mg/dL since the prior result.
+
+What This Means
+- Creatinine is above the typical reference range and should be reviewed with your doctor.
+
+Context From Your Medical Record
+- No specific non-lab context was found that changes interpretation today. If your health status changed, ask your clinician to reinterpret these labs in that context.
+
+Helpful Resources
+- Creatinine is used to estimate kidney function. Rising creatinine over time can suggest worsening kidney filtration. [source: NKF:creatinine]
+- Ask your doctor what changed since last time, what target to aim for, and when to repeat testing. [source: AHRQ:discussion]
+
+Careful Lifestyle Options
+- No personalized lifestyle adjustment is suggested from current data. Keep routine healthy habits and review your plan at follow-up.
+- Safety note: These options are educational and should be personalized with your clinician, especially if you have chronic conditions, pregnancy, or medication interactions.
+
+Questions To Ask Your Doctor
+- Which values in my comprehensive metabolic panel are most important for me right now?
+- Could dehydration, diet, or medications explain these changes?
+
+Suggested Next Step
+- Schedule follow-up soon to review worsening lab trends and agree on a treatment plan.
