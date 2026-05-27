@@ -162,6 +162,10 @@ ClassMethod BuildClinicalContextLines(panel As %String, items As %DynamicArray, 
         Do out.%Push("Lipid-treatment context is present in medication records. Cholesterol results should be interpreted against your treatment goals and dose history.")
     }
 
+    If ..HasSupplementKeyword(context) {
+        Do out.%Push("Supplement context is present in medication records. Vitamins and food supplements can change some lab results or explain part of the pattern, so your clinician should interpret them together with the lab trend and timing of the dose.")
+    }
+
     If ..HasDiagnosticReportKeyword(context, "chronic kidney") || ..HasDiagnosticReportKeyword(context, "ckd") {
         Do out.%Push("Diagnostic report context suggests kidney disease history. Kidney-related labs may follow individualized baseline expectations.")
     }
@@ -191,6 +195,10 @@ ClassMethod AddContextAwareMeaning(ByRef out As %DynamicArray, panel As %String,
 
     If ..HasMedicationKeyword(context, "steroid") {
         Do out.%Push("Because steroid medication context was found, some glucose and white-cell values can be affected by treatment.")
+    }
+
+    If ..HasSupplementKeyword(context) {
+        Do out.%Push("Because supplement context was found, some lab changes may reflect vitamins or food supplements rather than the underlying disease alone. Timing, dose, and brand can matter.")
     }
 
     If ..HasDiagnosticReportKeyword(context, "fatty liver") {
@@ -367,6 +375,37 @@ ClassMethod HasWorseningByCode(items As %DynamicArray, code As %String) As %Bool
         Set dir = ..GetSafeText(it, "trendDirection")
         If (status="high")&&(dir="up") Return 1
         If (status="low")&&(dir="down") Return 1
+    }
+
+    Return 0
+}
+
+ClassMethod HasSupplementKeyword(context As %DynamicObject) As %Boolean [ Internal ]
+{
+    If '$ISOBJECT(context) {
+        Return 0
+    }
+
+    Set keywords = "iron|ferrous|vitamin d|vitamin b12|b12|folate|folic acid|calcium|magnesium|multivitamin|prenatal|biotin|omega-3|fish oil|probiotic"
+    If ..HasMedicationKeywordsAny(context, keywords) {
+        Return 1
+    }
+
+    Return 0
+}
+
+ClassMethod HasMedicationKeywordsAny(context As %DynamicObject, keywords As %String) As %Boolean [ Internal ]
+{
+    If '$ISOBJECT(context) {
+        Return 0
+    }
+
+    Set parts = $LENGTH(keywords, "|")
+    For i=1:1:parts {
+        Set kw = $PIECE(keywords, "|", i)
+        If kw '= "" , ..HasMedicationKeyword(context, kw) {
+            Return 1
+        }
     }
 
     Return 0
