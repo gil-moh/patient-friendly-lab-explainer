@@ -2,6 +2,13 @@
 
 Patient-facing lab explanation engine with deterministic output and grounded educational snippets.
 
+## Team
+
+- Team lead: Gil Tavassy (InterSystems Developer Community profile: https://community.intersystems.com/user/gil-tavassy)
+- LinkedIn: https://www.linkedin.com/in/gil-tavassy-5703b311b
+
+Submission mode: solo project.
+
 ## Current implementation status
 
 Phase 1 has started with the grounding core:
