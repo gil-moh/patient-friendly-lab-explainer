@@ -22,11 +22,12 @@ halt
 
 $macroFile = Join-Path $env:TEMP 'patient_lab_explainer_run_all.mac'
 Set-Content -Path $macroFile -Value $macro -Encoding ascii
-Get-Content -Raw $macroFile | docker exec -i iris-ai-hub-162 iris session IRIS
+$container = "patient-friendly-lab-explainer-iris-1"
+Get-Content -Raw $macroFile | docker exec -i $container iris session IRIS
 
-docker cp iris-ai-hub-162:/tmp/patient-lab-a1c.txt (Join-Path $outDir 'patient-lab-a1c.txt') | Out-Null
-docker cp iris-ai-hub-162:/tmp/patient-lab-lipids.txt (Join-Path $outDir 'patient-lab-lipids.txt') | Out-Null
-docker cp iris-ai-hub-162:/tmp/patient-lab-cmp.txt (Join-Path $outDir 'patient-lab-cmp.txt') | Out-Null
+docker cp "${container}:/tmp/patient-lab-a1c.txt" (Join-Path $outDir 'patient-lab-a1c.txt') | Out-Null
+docker cp "${container}:/tmp/patient-lab-lipids.txt" (Join-Path $outDir 'patient-lab-lipids.txt') | Out-Null
+docker cp "${container}:/tmp/patient-lab-cmp.txt" (Join-Path $outDir 'patient-lab-cmp.txt') | Out-Null
 
 Write-Host "Generated artifacts:"
 Write-Host "- $outDir\patient-lab-a1c.txt"
