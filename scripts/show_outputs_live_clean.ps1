@@ -1,6 +1,6 @@
 param(
     [string]$MacroPath = "C:\Projects\FHIR\tmp_validation\macros\tmp_show_various_outputs.mac",
-    [string]$Container = "iris-ai-hub-162"
+    [string]$Container = "patient-friendly-lab-explainer-iris-1"
 )
 
 $ErrorActionPreference = 'Stop'
