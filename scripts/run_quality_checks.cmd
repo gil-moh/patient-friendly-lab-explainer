@@ -8,6 +8,6 @@ set MAC=%TEMP%\patient_lab_explainer_quality.mac
 >> "%MAC%" echo write !,"QUALITY_STATUS=",$system.Status.GetOneErrorText^(sc^),!
 >> "%MAC%" echo halt
 
-type "%MAC%" | docker exec -i iris-ai-hub-162 iris session IRIS
+type "%MAC%" | docker exec -i patient-friendly-lab-explainer-iris-1 iris session IRIS
 
 endlocal

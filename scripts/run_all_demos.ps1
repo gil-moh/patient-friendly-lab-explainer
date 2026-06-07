@@ -8,9 +8,6 @@ if (-not (Test-Path $outDir)) {
 
 $macro = @'
 zn "USER"
-set ^||ENV("FHIR_BASE_URL")="http://host.docker.internal:52773/fhir/r4"
-set ^||ENV("FHIR_BASIC_USER")="_SYSTEM"
-set ^||ENV("FHIR_BASIC_PASS")="SYS"
 set sc1=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoToFile("demo-rich-003","a1c","/tmp/patient-lab-a1c.txt",1)
 write !,"A1C=",$system.Status.GetOneErrorText(sc1),!
 set sc2=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoToFile("demo-rich-003","lipids","/tmp/patient-lab-lipids.txt",1)
