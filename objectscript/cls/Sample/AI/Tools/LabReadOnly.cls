@@ -329,7 +329,7 @@ ClassMethod GetBaseUrl() As %String [ Internal ]
         Set base = $GET(^||ENV("FHIR_BASE_URL"))
     }
     If base = "" {
-        Set base = "http://localhost:52773/fhir/r4"
+        Set base = "http://fhir:52773/fhir/r4"
     }
     Return $ZSTRIP(base, "<W", "/")
 }
