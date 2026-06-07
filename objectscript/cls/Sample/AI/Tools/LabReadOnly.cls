@@ -24,12 +24,12 @@ ClassMethod GetObservationsByPanel(patientId As %String, panel As %String, limit
     Set codeSet = ..GetPanelCodeSet(normalizedPanel)
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
-    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max _ "&_sort=-date"
+    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
     If codeSet '= "" {
         Set query = query _ "&code=" _ ..UrlEncode(codeSet)
     }
 
-    Set bundle = ..GetFHIR("Observation?" _ query)
+    Set bundle = ..GetFHIRWithFallback("Observation?" _ query, patientId)
     If ..SafeGet(bundle, "error") '= "" {
         Return bundle
     }
@@ -51,7 +51,7 @@ ClassMethod GetAllergies(patientId As %String, limit As %Integer = 100) As %Dyna
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
     Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
-    Return ..GetFHIR("AllergyIntolerance?" _ query)
+    Return ..GetFHIRWithFallback("AllergyIntolerance?" _ query, patientId)
 }
 
 /// Fetch family history records for a patient.
@@ -63,7 +63,7 @@ ClassMethod GetFamilyHistory(patientId As %String, limit As %Integer = 100) As %
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
     Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
-    Return ..GetFHIR("FamilyMemberHistory?" _ query)
+    Return ..GetFHIRWithFallback("FamilyMemberHistory?" _ query, patientId)
 }
 
 /// Fetch active/relevant conditions for context-aware lab interpretation.
@@ -75,7 +75,7 @@ ClassMethod GetConditions(patientId As %String, limit As %Integer = 100) As %Dyn
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
     Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
-    Return ..GetFHIR("Condition?" _ query)
+    Return ..GetFHIRWithFallback("Condition?" _ query, patientId)
 }
 
 /// Fetch medication requests to provide treatment-context interpretation.
@@ -87,7 +87,7 @@ ClassMethod GetMedicationRequests(patientId As %String, limit As %Integer = 100)
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
     Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
-    Return ..GetFHIR("MedicationRequest?" _ query)
+    Return ..GetFHIRWithFallback("MedicationRequest?" _ query, patientId)
 }
 
 /// Fetch diagnostic reports to provide broader diagnostic context.
@@ -99,7 +99,7 @@ ClassMethod GetDiagnosticReports(patientId As %String, limit As %Integer = 100) 
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
     Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
-    Return ..GetFHIR("DiagnosticReport?" _ query)
+    Return ..GetFHIRWithFallback("DiagnosticReport?" _ query, patientId)
 }
 
 /// Fetch observations by an explicit LOINC code set.
@@ -110,12 +110,12 @@ ClassMethod GetObservationsByCodes(patientId As %String, codeSet As %String, lim
     }
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
-    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max _ "&_sort=-date"
+    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
     If codeSet '= "" {
         Set query = query _ "&code=" _ ..UrlEncode(codeSet)
     }
 
-    Return ..GetFHIR("Observation?" _ query)
+    Return ..GetFHIRWithFallback("Observation?" _ query, patientId)
 }
 
 /// Vital signs and body measurements used for context (BP, pulse, SpO2, temp, weight, height, BMI).
@@ -147,8 +147,8 @@ ClassMethod GetEncounters(patientId As %String, limit As %Integer = 100) As %Dyn
     }
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
-    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max _ "&_sort=-date"
-    Return ..GetFHIR("Encounter?" _ query)
+    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
+    Return ..GetFHIRWithFallback("Encounter?" _ query, patientId)
 }
 
 /// Fetch procedures that may explain transient lab changes.
@@ -159,8 +159,8 @@ ClassMethod GetProcedures(patientId As %String, limit As %Integer = 100) As %Dyn
     }
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
-    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max _ "&_sort=-date"
-    Return ..GetFHIR("Procedure?" _ query)
+    Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
+    Return ..GetFHIRWithFallback("Procedure?" _ query, patientId)
 }
 
 /// Fetch planned/active service requests (follow-up gaps context).
@@ -172,7 +172,7 @@ ClassMethod GetServiceRequests(patientId As %String, limit As %Integer = 100) As
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
     Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
-    Return ..GetFHIR("ServiceRequest?" _ query)
+    Return ..GetFHIRWithFallback("ServiceRequest?" _ query, patientId)
 }
 
 /// Fetch appointments for adherence/follow-up context.
@@ -184,7 +184,7 @@ ClassMethod GetAppointments(patientId As %String, limit As %Integer = 100) As %D
 
     Set max = $SELECT(limit>500:500, limit<1:1, 1:limit)
     Set query = "patient=" _ ..UrlEncode(patientId) _ "&_count=" _ max
-    Return ..GetFHIR("Appointment?" _ query)
+    Return ..GetFHIRWithFallback("Appointment?" _ query, patientId)
 }
 
 ClassMethod NormalizePanel(panel As %String) As %String [ Internal ]
@@ -231,6 +231,31 @@ ClassMethod GetPanelCodeSet(panel As %String) As %String [ Internal ]
     }
 
     Return ""
+}
+
+/// Search with automatic fallback: if the bare patient ID returns 0 entries,
+/// retries with the full "Patient/<id>" reference. Handles servers that index
+/// references differently (some require the type prefix, some do not).
+ClassMethod GetFHIRWithFallback(path As %String, patientId As %String) As %DynamicObject [ Internal ]
+{
+    Set result = ..GetFHIR(path)
+    If ..CountBundleEntries(result) > 0 {
+        Return result
+    }
+    If $ISOBJECT(result) && (..SafeGet(result, "error") '= "") {
+        Return result
+    }
+    If $EXTRACT(patientId, 1, 8) '= "Patient/" {
+        Set fullRef = "Patient/" _ patientId
+        Set altPath = $REPLACE(path, "patient=" _ ..UrlEncode(patientId), "patient=" _ ..UrlEncode(fullRef))
+        If altPath '= path {
+            Set retry = ..GetFHIR(altPath)
+            If ..CountBundleEntries(retry) > 0 {
+                Return retry
+            }
+        }
+    }
+    Return result
 }
 
 ClassMethod GetFHIR(path As %String) As %DynamicObject [ Internal ]
