@@ -73,6 +73,21 @@ FHIR_BEARER_TOKEN=your-token
 
 The synthetic demos (`DemoSynthetic`) work without any FHIR server — no patient data is needed to evaluate the explanation engine.
 
+**Important — connecting to a FHIR server on your host machine:**
+
+Inside Docker, `localhost` resolves to the container itself, not your host. If your FHIR server is running on the host machine, use:
+
+- **Mac / Windows (Docker Desktop):** `host.docker.internal`
+  ```
+  FHIR_BASE_URL=http://host.docker.internal:52773/fhir/r4
+  ```
+- **Linux:** the Docker gateway IP (typically `172.17.0.1`)
+  ```
+  FHIR_BASE_URL=http://172.17.0.1:52773/fhir/r4
+  ```
+
+Set this before `docker compose up` or pass it directly: `FHIR_BASE_URL=http://host.docker.internal:YOUR_PORT/fhir/r4 docker compose up -d`
+
 ## Environment variables
 
 | Variable | Default | Purpose |
@@ -143,9 +158,11 @@ Do ##class(Sample.AI.Examples.LabTrendDemo).DemoSynthetic("lipids")
 Do ##class(Sample.AI.Examples.LabVectorDemo).Demo("a1c", "What does high A1c mean?", 3)
 Do ##class(Sample.AI.Examples.LabRetrieverDemo).Demo("a1c", "What does high A1c mean?", 3)
 
-// Live FHIR demos (requires FHIR server with patient data)
-Do ##class(Sample.AI.Examples.LabTrendDemo).Demo("demo-rich-003", "a1c")
-Do ##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoToFile("demo-rich-003", "a1c", "/tmp/patient-lab-a1c.txt", 1)
+// Live FHIR demos (requires a FHIR server with at least one patient loaded)
+// Replace <your-patient-id> with the FHIR logical ID of a patient in your server
+Do ##class(Sample.AI.Examples.LabTrendDemo).Demo("<your-patient-id>", "a1c")
+Do ##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoToFile("<your-patient-id>", "a1c", "/tmp/patient-lab-a1c.txt", 1)
+// Note: set FHIR_BASE_URL correctly before running — see "FHIR server" section above
 ```
 
 ## Quality checks
