@@ -7,17 +7,17 @@ if (-not (Test-Path $outDir)) {
 }
 
 # Generates demo output files using synthetic patient data (no FHIR server needed).
-# To run against a real patient, replace DemoSynthetic with DemoToFile and supply
-# a patient ID, e.g.: DemoToFile("your-patient-id","a1c","/tmp/patient-lab-a1c.txt",1)
-# Also set FHIR_BASE_URL before docker compose up — see README for Docker networking notes.
+# The last argument (1) enables synthetic mode — no patient ID or FHIR connection required.
+# To run against a real patient, change the last argument to 0 and replace "synthetic"
+# with your patient's FHIR ID. Also set FHIR_BASE_URL — see README for Docker networking.
 $macro = @'
 zn "USER"
-set sc1=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoSynthetic("a1c")
-write !,"A1C=",$system.Status.GetOneErrorText($$$OK),!
-set sc2=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoSynthetic("lipids")
-write !,"LIPIDS=",$system.Status.GetOneErrorText($$$OK),!
-set sc3=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoSynthetic("cmp")
-write !,"CMP=",$system.Status.GetOneErrorText($$$OK),!
+set sc1=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoToFile("synthetic","a1c","/tmp/patient-lab-a1c.txt",1)
+write !,"A1C=",$system.Status.GetOneErrorText(sc1),!
+set sc2=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoToFile("synthetic","lipids","/tmp/patient-lab-lipids.txt",1)
+write !,"LIPIDS=",$system.Status.GetOneErrorText(sc2),!
+set sc3=##class(Sample.AI.Examples.PatientLabExplainerDemo).DemoToFile("synthetic","cmp","/tmp/patient-lab-cmp.txt",1)
+write !,"CMP=",$system.Status.GetOneErrorText(sc3),!
 halt
 '@
 
