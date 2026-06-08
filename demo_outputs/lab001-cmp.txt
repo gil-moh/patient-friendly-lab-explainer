@@ -1,0 +1,56 @@
+
+Patient-Friendly Lab Explainer
+Patient: lab-test-001
+Panel: Comprehensive Metabolic Panel
+
+Your Most Recent Results
+- Glucose: 215 mg/dL (high)
+- Creatinine: 1.1 mg/dL (in range)
+- Potassium: 4 mEq/L (in range)
+- Sodium: 140 mEq/L (in range)
+- Alkaline phosphatase: 75 U/L (in range)
+- AST: 31 U/L (in range)
+- ALT: 38 U/L (in range)
+- BUN: 18 mg/dL (in range)
+- Calcium: 9.1 mg/dL (in range)
+
+Your Trend
+- Glucose increased by 33 mg/dL since the prior result.
+- Creatinine increased by .1 mg/dL since the prior result.
+- Potassium decreased by .1 mmol/L since the prior result.
+- Sodium decreased by 1 mmol/L since the prior result.
+- Alkaline phosphatase increased by 3 U/L since the prior result.
+- AST increased by 3 U/L since the prior result.
+- ALT increased by 6 U/L since the prior result.
+- BUN increased by 2 mg/dL since the prior result.
+- Calcium decreased by .1 mg/dL since the prior result.
+
+What This Means
+- Glucose: is above the usual range. Glucose is your blood sugar level at the time of the blood draw. Next step: review possible causes and timing for repeat testing with your doctor.
+- Creatinine: is in the usual range. Creatinine is a kidney-related waste marker used to estimate kidney function. Next step: continue your current plan and routine follow-up.
+- Potassium: is in the usual range. This test gives information about how your body is functioning and is interpreted together with your symptoms and other labs. Next step: continue your current plan and routine follow-up.
+- Sodium: is in the usual range. This test gives information about how your body is functioning and is interpreted together with your symptoms and other labs. Next step: continue your current plan and routine follow-up.
+- Alkaline phosphatase: is in the usual range. This test gives information about how your body is functioning and is interpreted together with your symptoms and other labs. Next step: continue your current plan and routine follow-up.
+- AST: is in the usual range. This test gives information about how your body is functioning and is interpreted together with your symptoms and other labs. Next step: continue your current plan and routine follow-up.
+- ALT: is in the usual range. This test gives information about how your body is functioning and is interpreted together with your symptoms and other labs. Next step: continue your current plan and routine follow-up.
+- BUN: is in the usual range. BUN is a waste marker that can rise with dehydration or kidney stress. Next step: continue your current plan and routine follow-up.
+- Calcium: is in the usual range. Calcium helps bones, muscles, and nerves work well. Next step: continue your current plan and routine follow-up.
+
+Context From Your Medical Record
+- Body composition context: BMI is 29.8 (above usual range) from recorded BMI.
+- Medication timing context: a recent medication start or update was detected, which can temporarily shift lab values.
+
+Careful Lifestyle Options
+- Treatment-adherence option: worsening trends can happen when doses are missed or timing is inconsistent. Take medications exactly as prescribed, and ask your care team to simplify the regimen if adherence is difficult.
+- Metabolic-support option: glucose control appears to be worsening. Prioritize medication adherence, reduce refined sugars/late-night carbohydrates, and add regular low-risk exercise (for example walking) most days if medically safe.
+- Safety note: These options are educational and should be personalized with your clinician, especially if you have chronic conditions, pregnancy, or medication interactions.
+
+Questions To Ask Your Doctor
+- Which values in my comprehensive metabolic panel are most important for me right now?
+- Could dehydration, diet, or medications explain these changes?
+- How do these results compare with my expected response to current cholesterol medication?
+- Could a recent medication change affect these lab results?
+- How should my BMI and weight trend affect this plan?
+
+Suggested Next Step
+- Schedule follow-up soon to review worsening lab trends and agree on a treatment plan.

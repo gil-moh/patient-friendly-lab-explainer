@@ -1,0 +1,42 @@
+
+Patient-Friendly Lab Explainer
+Patient: lab-test-001
+Panel: Cholesterol and Lipid Panel
+
+Your Most Recent Results
+- Total cholesterol: 230 mg/dL (high)
+- HDL cholesterol: 36 mg/dL (low)
+- LDL cholesterol: 162 mg/dL (high)
+- Triglycerides: 218 mg/dL (high)
+
+Your Trend
+- Total cholesterol increased by 12 mg/dL since the prior result.
+- HDL cholesterol decreased by 2 mg/dL since the prior result.
+- LDL cholesterol increased by 14 mg/dL since the prior result.
+- Triglycerides increased by 23 mg/dL since the prior result.
+
+What This Means
+- Total cholesterol: is above the usual range. This test gives information about how your body is functioning and is interpreted together with your symptoms and other labs. Next step: review possible causes and timing for repeat testing with your doctor.
+- HDL cholesterol: is below the usual range. HDL is often called good cholesterol because it helps remove excess cholesterol from blood vessels. Next step: review likely causes and whether nutrition, medications, or follow-up tests are needed.
+- LDL cholesterol: is above the usual range. LDL is often called bad cholesterol because higher values are linked to more heart and stroke risk. Next step: review possible causes and timing for repeat testing with your doctor.
+- Triglycerides: is above the usual range. This test gives information about how your body is functioning and is interpreted together with your symptoms and other labs. Next step: review possible causes and timing for repeat testing with your doctor.
+
+Context From Your Medical Record
+- Lipid-treatment context is present in medication records. Cholesterol results should be interpreted against your treatment goals and dose history.
+- Body composition context: BMI is 29.8 (above usual range) from recorded BMI.
+- Medication timing context: a recent medication start or update was detected, which can temporarily shift lab values.
+
+Careful Lifestyle Options
+- Treatment-adherence option: worsening trends can happen when doses are missed or timing is inconsistent. Take medications exactly as prescribed, and ask your care team to simplify the regimen if adherence is difficult.
+- Cardiometabolic option: cholesterol-related values are elevated or rising. Reinforce medication adherence, increase fiber-rich foods, reduce saturated/trans fats, and maintain regular physical activity if medically safe.
+- Safety note: These options are educational and should be personalized with your clinician, especially if you have chronic conditions, pregnancy, or medication interactions.
+
+Questions To Ask Your Doctor
+- Which cholesterol number should we focus on most right now?
+- Do I need medication changes or lifestyle changes first?
+- How do these results compare with my expected response to current cholesterol medication?
+- Could a recent medication change affect these lab results?
+- How should my BMI and weight trend affect this plan?
+
+Suggested Next Step
+- Schedule follow-up soon to review worsening lab trends and agree on a treatment plan.

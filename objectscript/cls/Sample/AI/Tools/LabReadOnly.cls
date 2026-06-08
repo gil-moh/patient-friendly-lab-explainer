@@ -265,6 +265,9 @@ ClassMethod GetFHIR(path As %String) As %DynamicObject [ Internal ]
 
     Set req = ##class(%Net.HttpRequest).%New()
     Set req.SSLCheckServerIdentity = 0
+    If $ZCONVERT($EXTRACT(baseUrl, 1, 5), "L") = "https" {
+        Set req.SSLConfiguration = "default"
+    }
 
     Set basicUser = $SYSTEM.Util.GetEnviron("FHIR_BASIC_USER")
     If basicUser = "" {
@@ -349,6 +352,18 @@ ClassMethod ReadResponseBody(stream As %Stream.Object) As %String [ Internal ]
 ClassMethod UrlEncode(value As %String) As %String [ Internal ]
 {
     Return $ZCONVERT(value, "O", "URL")
+}
+
+ClassMethod CountBundleEntries(bundle As %DynamicObject) As %Integer [ Internal ]
+{
+    If '$ISOBJECT(bundle) {
+        Return 0
+    }
+    Set entries = bundle.%Get("entry")
+    If '$ISOBJECT(entries) {
+        Return 0
+    }
+    Return entries.%Size()
 }
 
 ClassMethod SafeGet(obj As %DynamicAbstractObject, key As %String) As %String [ Internal ]

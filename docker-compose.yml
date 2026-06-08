@@ -8,8 +8,10 @@ services:
     volumes:
       - ./keys:/external/keys
     command: -k /external/keys/iris-container-x64.key
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
-      - FHIR_BASE_URL=${FHIR_BASE_URL:-http://localhost:52773/fhir/r4}
-      - FHIR_BASIC_USER=${FHIR_BASIC_USER:-}
-      - FHIR_BASIC_PASS=${FHIR_BASIC_PASS:-}
+      - FHIR_BASE_URL=${FHIR_BASE_URL:-http://host.docker.internal:52773/fhir/r4}
+      - FHIR_BASIC_USER=${FHIR_BASIC_USER:-_SYSTEM}
+      - FHIR_BASIC_PASS=${FHIR_BASIC_PASS:-SYS}
       - FHIR_BEARER_TOKEN=${FHIR_BEARER_TOKEN:-}

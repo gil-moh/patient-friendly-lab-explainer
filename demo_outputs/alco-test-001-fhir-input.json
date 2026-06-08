@@ -1,0 +1,2080 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "alco-test-001",
+        "name": [
+          {
+            "family": "Drinkwater",
+            "given": [
+              "Alex"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1982-07-11"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/alco-test-001"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "7200002",
+              "display": "Alcohol use disorder"
+            }
+          ],
+          "text": "Alcohol use disorder"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "19943007",
+              "display": "Alcoholic liver cirrhosis"
+            }
+          ],
+          "text": "Alcoholic liver cirrhosis"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "50711007",
+              "display": "Chronic hepatitis C"
+            }
+          ],
+          "text": "Chronic hepatitis C"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "76272004",
+              "display": "Syphilis"
+            }
+          ],
+          "text": "Syphilis"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "patient": {
+          "reference": "Patient/alco-test-001"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "father"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "7200002",
+                  "display": "Alcohol use disorder"
+                }
+              ],
+              "text": "Alcohol use disorder"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "FamilyMemberHistory"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "patient": {
+          "reference": "Patient/alco-test-001"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "mother"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "7200002",
+                  "display": "Alcohol use disorder"
+                }
+              ],
+              "text": "Alcohol use disorder"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "FamilyMemberHistory"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Spironolactone 100 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "authoredOn": "2026-03-09"
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationRequest"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Thiamine 100 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "authoredOn": "2026-03-09"
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationRequest"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Omeprazole 20 MG Oral Capsule"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "authoredOn": "2026-03-09"
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationRequest"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "code": {
+          "text": "Hepatitis C viral load panel"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "conclusion": "Hepatitis C RNA: Detected. Hepatitis C RNA positive. Chronic HCV infection confirmed. Genotype 1a. Viral load 2.4 million IU/mL."
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "code": {
+          "text": "Syphilis serology panel"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "conclusion": "Syphilis IgG: Reactive. Positive result. Treponemal antibody test reactive. Consistent with active or previously treated syphilis infection."
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "code": {
+          "text": "Liver ultrasound with Doppler"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "conclusion": "Findings consistent with cirrhosis and fatty liver disease. Hepatic steatosis and nodular liver surface. Splenomegaly. Portal hypertension pattern. Impression: alcoholic liver disease with cirrhosis."
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "period": {
+          "start": "2026-03-09",
+          "end": "2026-03-09"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-social-audit",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "74013-4",
+              "display": "Alcohol Use Disorder Identification Test total score [AUDIT-C]"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 18,
+          "unit": "score",
+          "system": "http://unitsofmeasure.org",
+          "code": "score"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-social-audit"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-ast-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1920-8",
+              "display": "Aspartate aminotransferase in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 75,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-ast-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-ast-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1920-8",
+              "display": "Aspartate aminotransferase in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 98,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-ast-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-alt-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6",
+              "display": "Alanine aminotransferase in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 95,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-alt-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-alt-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6",
+              "display": "Alanine aminotransferase in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 125,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-alt-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-bili-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Bilirubin total in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 2.0,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-bili-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-bili-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Bilirubin total in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 2.8,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-bili-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-alp-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6768-6",
+              "display": "Alkaline phosphatase in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 130,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-alp-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-alp-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6768-6",
+              "display": "Alkaline phosphatase in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 145,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-alp-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-bun-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3094-0",
+              "display": "Urea nitrogen in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 9,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-bun-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-bun-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3094-0",
+              "display": "Urea nitrogen in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 7,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-bun-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-cr-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 0.8,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-cr-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-cr-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 0.7,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-cr-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-glu-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2339-0",
+              "display": "Glucose in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 85,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-glu-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-glu-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2339-0",
+              "display": "Glucose in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 82,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-glu-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-ca-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "17861-6",
+              "display": "Calcium in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 8.3,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-ca-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-ca-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "17861-6",
+              "display": "Calcium in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 8.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-ca-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-na-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2",
+              "display": "Sodium in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 136,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-na-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-na-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2",
+              "display": "Sodium in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 133,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-na-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-k-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 3.5,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-k-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cmp-k-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 3.2,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cmp-k-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-hgb-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 10.8,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-hgb-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-hgb-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 9.8,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-hgb-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-wbc-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 3.8,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-wbc-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-wbc-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 3.2,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-wbc-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-plt-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 105,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-plt-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-plt-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 85,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-plt-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-hct-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4544-3",
+              "display": "Hematocrit in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 33,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-hct-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-cbc-hct-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4544-3",
+              "display": "Hematocrit in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 30,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-cbc-hct-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-a1c-prior",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-03-09",
+        "valueQuantity": {
+          "value": 5.1,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-a1c-prior"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-a1c-recent",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 5.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-a1c-recent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-crp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C reactive protein in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 45,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-crp"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-ferritin",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 420,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-ferritin"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-hr",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 94,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-hr"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-bmi",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 21.4,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-bmi"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 118,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-sbp"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "alco-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/alco-test-001"
+        },
+        "effectiveDateTime": "2026-05-08",
+        "valueQuantity": {
+          "value": 72,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/alco-dbp"
+      }
+    }
+  ]
+}

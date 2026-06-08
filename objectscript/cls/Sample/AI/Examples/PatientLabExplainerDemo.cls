@@ -67,6 +67,22 @@ ClassMethod DemoToFile(patientId As %String = "demo-rich-003", panel As %String 
 ClassMethod WriteNarrative(narrative As %DynamicObject)
 {
     Write !, "Patient-Friendly Lab Explainer", !
+
+    If '$ISOBJECT(narrative) {
+        Write "Error: no response received from the FHIR server.", !
+        Return
+    }
+
+    Set errMsg = ""
+    Try { Set errMsg = narrative.%Get("error") } Catch {}
+    If errMsg '= "" {
+        Write "Error: could not retrieve patient data.", !
+        Write "  Reason:  ", errMsg, !
+        Set errUrl = "" Try { Set errUrl = narrative.%Get("url") } Catch {}
+        If errUrl '= "" { Write "  Server:  ", errUrl, ! }
+        Return
+    }
+
     Write "Patient: ", narrative.%Get("patientId"), !
     Set panelLabel = narrative.%Get("panelLabel")
     If panelLabel = "" {
