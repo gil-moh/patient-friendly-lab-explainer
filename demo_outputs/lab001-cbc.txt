@@ -1,0 +1,41 @@
+
+Patient-Friendly Lab Explainer
+Patient: lab-test-001
+Panel: Complete Blood Count
+
+Your Most Recent Results
+- Hemoglobin: 11.8 g/dL (low)
+- White blood cell count: 8.2 10*3/uL (in range)
+- Platelets: 198 10*3/uL (in range)
+- Hematocrit: 36 % (in range)
+
+Your Trend
+- Hemoglobin decreased by .4 g/dL since the prior result.
+- White blood cell count increased by .4 10*3/uL since the prior result.
+- Platelets decreased by 12 10*3/uL since the prior result.
+- Hematocrit decreased by 1 % since the prior result.
+
+What This Means
+- Hemoglobin: is below the usual range. Hemoglobin carries oxygen in your red blood cells. Next step: review likely causes and whether nutrition, medications, or follow-up tests are needed.
+- White blood cell count: is in the usual range. White blood cells help your body fight infection and inflammation. Next step: continue your current plan and routine follow-up.
+- Platelets: is in the usual range. Platelets help your blood clot and stop bleeding. Next step: continue your current plan and routine follow-up.
+- Hematocrit: is in the usual range. Hematocrit is the percent of your blood made up of red blood cells. Next step: continue your current plan and routine follow-up.
+
+Context From Your Medical Record
+- Body composition context: BMI is 29.8 (above usual range) from recorded BMI.
+- Medication timing context: a recent medication start or update was detected, which can temporarily shift lab values.
+
+Careful Lifestyle Options
+- Treatment-adherence option: worsening trends can happen when doses are missed or timing is inconsistent. Take medications exactly as prescribed, and ask your care team to simplify the regimen if adherence is difficult.
+- Energy-support option: anemia-pattern signals are present. Prioritize recovery, hydration, and discuss iron/B12/folate evaluation before starting supplements on your own.
+- Safety note: These options are educational and should be personalized with your clinician, especially if you have chronic conditions, pregnancy, or medication interactions.
+
+Questions To Ask Your Doctor
+- Do these blood count changes need repeat testing soon?
+- Could my symptoms be related to these blood count results?
+- How do these results compare with my expected response to current cholesterol medication?
+- Could a recent medication change affect these lab results?
+- How should my BMI and weight trend affect this plan?
+
+Suggested Next Step
+- Schedule follow-up soon to review worsening lab trends and agree on a treatment plan.

@@ -1,0 +1,34 @@
+
+Patient-Friendly Lab Explainer
+Patient: lab-test-001
+Panel: Hemoglobin A1c
+
+Your Most Recent Results
+- Hemoglobin A1c: 8.1 % (high)
+
+Your Trend
+- Hemoglobin A1c is stable compared with the prior result.
+
+What This Means
+- Hemoglobin A1c: is above the usual range. A1c shows your average blood sugar over about the last 3 months. Next step: review possible causes and timing for repeat testing with your doctor.
+
+Context From Your Medical Record
+- Diabetes context is present. A1c goals are personalized (for example by age, comorbidities, and hypoglycemia risk), so your target may differ from generic thresholds.
+- Diabetes-treatment context is present in medication records. Lab interpretation should consider treatment stage and recent medication changes.
+- Body composition context: BMI is 29.8 (above usual range) from recorded BMI.
+- Medication timing context: a recent medication start or update was detected, which can temporarily shift lab values.
+- Personal baseline context: multiple prior values are available, allowing interpretation against your own trend baseline rather than one isolated result.
+
+Careful Lifestyle Options
+- Metabolic-support option: glucose control appears to be worsening. Prioritize medication adherence, reduce refined sugars/late-night carbohydrates, and add regular low-risk exercise (for example walking) most days if medically safe.
+- Safety note: These options are educational and should be personalized with your clinician, especially if you have chronic conditions, pregnancy, or medication interactions.
+
+Questions To Ask Your Doctor
+- Is my A1c target right for my age and health conditions?
+- What specific change would most improve my next A1c result?
+- How do these results compare with my expected response to current cholesterol medication?
+- Could a recent medication change affect these lab results?
+- How should my BMI and weight trend affect this plan?
+
+Suggested Next Step
+- Review these abnormal values with your doctor and confirm timing for repeat labs.

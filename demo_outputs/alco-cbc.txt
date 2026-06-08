@@ -1,0 +1,63 @@
+
+Patient-Friendly Lab Explainer
+Patient: alco-test-001
+Panel: Complete Blood Count
+
+Your Most Recent Results
+- Hemoglobin: 9.8 g/dL (low)
+- White blood cell count: 3.2 10*3/uL (low)
+- Platelets: 85 10*3/uL (low)
+- Hematocrit: 30 % (low)
+- Recent infection testing: Hepatitis C was reported as positive.
+- Recent infection testing: A recent viral test was reported as positive.
+- Recent infection testing: Syphilis was reported as positive.
+- Recent infection testing: Hepatitis C was reported as positive.
+- Recent infection testing: A recent viral test was reported as positive.
+- Recent infection testing: Syphilis was reported as positive.
+
+Your Trend
+- Hemoglobin decreased by 1 g/dL since the prior result.
+- White blood cell count decreased by .6 10*3/uL since the prior result.
+- Platelets decreased by 20 10*3/uL since the prior result.
+- Hematocrit decreased by 3 % since the prior result.
+
+What This Means
+- Hemoglobin: is below the usual range. Hemoglobin carries oxygen in your red blood cells. Next step: review likely causes and whether nutrition, medications, or follow-up tests are needed.
+- White blood cell count: is below the usual range. White blood cells help your body fight infection and inflammation. Next step: review likely causes and whether nutrition, medications, or follow-up tests are needed.
+- Platelets: is below the usual range. Platelets help your blood clot and stop bleeding. Next step: review likely causes and whether nutrition, medications, or follow-up tests are needed.
+- Hematocrit: is below the usual range. Hematocrit is the percent of your blood made up of red blood cells. Next step: review likely causes and whether nutrition, medications, or follow-up tests are needed.
+- Infection result - Hepatitis C: this infection was reported positive in recent testing. What this may mean physically: liver inflammation may be present, and over time this can increase risk of liver scarring if untreated. It can be passed through blood or sexual exposure (and in some cases perinatal exposure), so barrier protection and clinician-guided partner counseling are important. Next step: follow treatment instructions and complete the recommended repeat tests.
+- Infection result - A recent viral test: this infection was reported positive in recent testing. What this may mean physically: your body is likely mounting an immune response to a viral infection, which can cause fatigue, weakness, fever, and inflammation-related symptoms depending on the organ involved. Many viruses can be passed to others through close contact, respiratory secretions, blood, sexual contact, or contaminated hands/surfaces depending on the virus; your clinician can confirm the exact route for this result. Next step: follow treatment instructions and complete the recommended repeat tests.
+- Infection result - Syphilis: this infection was reported positive in recent testing. What this may mean physically: symptoms vary by stage and can include sores, rash, swollen lymph nodes, and systemic symptoms; untreated infection can affect multiple organs over time. Transmission depends on the organism and exposure type. Ask your clinician what precautions and partner/contact steps are needed now. Next step: follow treatment instructions and complete the recommended repeat tests.
+- Infection result - Hepatitis C: this infection was reported positive in recent testing. What this may mean physically: liver inflammation may be present, and over time this can increase risk of liver scarring if untreated. It can be passed through blood or sexual exposure (and in some cases perinatal exposure), so barrier protection and clinician-guided partner counseling are important. Next step: follow treatment instructions and complete the recommended repeat tests.
+- Infection result - A recent viral test: this infection was reported positive in recent testing. What this may mean physically: your body is likely mounting an immune response to a viral infection, which can cause fatigue, weakness, fever, and inflammation-related symptoms depending on the organ involved. Many viruses can be passed to others through close contact, respiratory secretions, blood, sexual contact, or contaminated hands/surfaces depending on the virus; your clinician can confirm the exact route for this result. Next step: follow treatment instructions and complete the recommended repeat tests.
+- Infection result - Syphilis: this infection was reported positive in recent testing. What this may mean physically: symptoms vary by stage and can include sores, rash, swollen lymph nodes, and systemic symptoms; untreated infection can affect multiple organs over time. Transmission depends on the organism and exposure type. Ask your clinician what precautions and partner/contact steps are needed now. Next step: follow treatment instructions and complete the recommended repeat tests.
+- CRP: is elevated at 45 mg/L. What this may mean physically: your body is likely in an active inflammatory state, often from infection, and this can match symptoms like fatigue, weakness, fever, body aches, and feeling generally unwell. Next step: review likely infection source and reassess CRP with follow-up.
+
+Context From Your Medical Record
+- Supplement context is present in medication records. Vitamins and food supplements can change some lab results or explain part of the pattern, so your clinician should interpret them together with the lab trend and timing of the dose.
+- Supplement-specific context: iron treatment is present while anemia-pattern signals remain low. This can happen early in treatment or with incomplete response, so trend over time and adherence review are important.
+- Body composition context: BMI is 21.4 (usual range) from recorded BMI.
+- Medication timing context: a recent medication start or update was detected, which can temporarily shift lab values.
+- Staging context: chronic disease stage information appears in your record, so lab targets may be individualized by stage.
+- Inflammation context: inflammatory markers are available and can help distinguish transient inflammation from chronic disease patterns.
+- Infectious-disease context: your record includes positive STI/STD findings (for example HIV, syphilis, or gonorrhea), so these blood-count changes should be interpreted together with active infection treatment and close follow-up.
+- Nutrition context: iron/vitamin markers are present and may explain selected abnormalities (for example anemia-related changes).
+- Recent care context: procedures or acute-care encounters are documented and can cause temporary lab shifts.
+- Lifestyle risk context: behavioral or social risk data is present and may be relevant when setting realistic lab-improvement targets.
+
+Careful Lifestyle Options
+- Infection-spread precaution: because a recent sexually transmitted infection test is positive, avoid unprotected sexual contact until your clinician confirms treatment response and advises it is safer; discuss partner testing/treatment.
+- Infection-spread precaution: because a blood/sexual transmission risk infection is present, use barrier protection, avoid sharing needles or blood-contact items, and follow clinician guidance for partner protection.
+- Treatment-adherence option: worsening trends can happen when doses are missed or timing is inconsistent. Take medications exactly as prescribed, and ask your care team to simplify the regimen if adherence is difficult.
+- Energy-support option: anemia-pattern signals are present. Prioritize recovery, hydration, and discuss iron/B12/folate evaluation before starting supplements on your own.
+- Safety note: These options are educational and should be personalized with your clinician, especially if you have chronic conditions, pregnancy, or medication interactions.
+
+Questions To Ask Your Doctor
+- Do these blood count changes need repeat testing soon?
+- Could my symptoms be related to these blood count results?
+- Could a recent medication change affect these lab results?
+- How should my BMI and weight trend affect this plan?
+
+Suggested Next Step
+- Schedule follow-up soon to review worsening lab trends and agree on a treatment plan.
